@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="20dp"
+    android:background="#FFD700"
+    tools:context=".MainActivity"
+    android:paddingRight="20dp">
+
+    <TextView
+        android:id="@+id/loginText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LOGIN"
+        android:textAllCaps="true"
+        android:textColor="@android:color/background_dark"
+        android:textSize="44dp"
+        android:layout_marginTop="150dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/editTextUserName"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="46dp" />
+
+    <EditText
+        android:id="@+id/editTextUserName"
+        android:layout_width="331dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/loginText"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:hint="User name"
+        app:layout_constraintBottom_toTopOf="@+id/editTextUserPassword"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="47dp" />
+
+    <EditText
+        android:id="@+id/editTextUserPassword"
+        android:layout_width="324dp"
+        android:layout_height="53dp"
+        android:ems="10"
+        android:layout_marginTop="50dp"
+        app:layout_constraintTop_toBottomOf="@id/editTextUserName"
+        android:inputType="textPassword"
+        android:hint="Password"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="47dp"
+        tools:layout_editor_absoluteY="297dp" />
+
+    <Button
+        android:id="@+id/button_login"
+        android:layout_width="138dp"
+        android:layout_height="45dp"
+        android:background="@color/cardview_light_background"
+        android:text="LOGIN"
+        android:layout_marginTop="50dp"
+        app:layout_constraintTop_toBottomOf="@id/editTextUserPassword"
+        tools:layout_editor_absoluteX="46dp"
+        tools:layout_editor_absoluteY="423dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/button_cancel"
+        android:layout_width="142dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="50dp"
+        android:background="@color/cardview_light_background"
+        android:text="@android:string/cancel"
+        android:textColor="@android:color/black"
+        app:layout_constraintLeft_toRightOf="@+id/button_login"
+        app:layout_constraintTop_toBottomOf="@id/editTextUserPassword"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="438dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

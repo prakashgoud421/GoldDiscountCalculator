@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<records>
+    <user>
+        <name>Prakash</name>
+        <password>123</password>
+        <privileged>true</privileged>
+    </user>
+    <user>
+        <name>Gopi</name>
+        <password>123</password>
+        <privileged>false</privileged>
+    </user>
+    <user>
+        <name>Pavan</name>
+        <password>123</password>
+        <privileged>false</privileged>
+    </user>
+</records>

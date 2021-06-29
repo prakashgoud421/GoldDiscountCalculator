@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFD700"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+        <TextView
+            android:id="@+id/welcomeText"
+            android:layout_width="match_parent"
+            android:padding="10dp"
+            android:layout_height="61dp"
+            android:text="Welcome !"
+            android:textColor="@android:color/background_dark"
+            android:textSize="18dp"
+            android:layout_gravity="center_horizontal"
+            android:textStyle="bold"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="37dp"
+            tools:layout_editor_absoluteY="118dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/goldPrice"
+                android:layout_width="161dp"
+                android:layout_height="61dp"
+                android:text="Gold Price (Per Gram) : "
+                android:textColor="@android:color/background_dark"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="37dp"
+                tools:layout_editor_absoluteY="118dp" />
+
+            <EditText
+                android:id="@+id/goldPriceEditText"
+                android:layout_width="181dp"
+                android:layout_height="60dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:hint="Enter price per gm"
+                tools:ignore="MissingConstraints"
+                app:layout_constraintLeft_toRightOf="@+id/goldPrice"
+                android:layout_marginLeft="20dp"
+                tools:layout_editor_absoluteX="214dp"
+                tools:layout_editor_absoluteY="119dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="161dp"
+                android:layout_height="61dp"
+                android:text="Weight(Grams)"
+                android:textColor="@android:color/background_dark"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:id="@+id/tvWeight"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="34dp"
+                tools:layout_editor_absoluteY="196dp" />
+
+            <EditText
+                android:id="@+id/editTextWeight"
+                android:layout_width="181dp"
+                android:layout_height="60dp"
+                android:ems="10"
+                android:layout_marginLeft="20dp"
+                android:inputType="textPersonName"
+                android:hint="Enter Weight"
+                app:layout_constraintLeft_toRightOf="@+id/tvWeight"
+                tools:ignore="DuplicateIds,MissingConstraints"
+                tools:layout_editor_absoluteX="214dp"
+                tools:layout_editor_absoluteY="194dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:id="@+id/discountLayout"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="161dp"
+                android:layout_height="61dp"
+                android:id="@+id/tvDiscount"
+                android:text="Discount"
+                android:textColor="@android:color/background_dark"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="34dp"
+                tools:layout_editor_absoluteY="271dp"
+                tools:ignore="MissingConstraints" />
+
+            <EditText
+                android:id="@+id/editTextDiscount"
+                android:layout_width="181dp"
+                android:layout_height="60dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:hint="Enter Discount"
+                app:layout_constraintLeft_toRightOf="@+id/tvDiscount"
+                android:layout_marginLeft="20dp"
+                tools:layout_editor_absoluteX="214dp"
+                tools:layout_editor_absoluteY="272dp"
+                tools:ignore="MissingConstraints" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/textViewDiscount"
+            android:layout_width="161dp"
+            android:layout_height="61dp"
+            android:layout_marginTop="50dp"
+            android:text="Total Price is : "
+            android:textColor="@android:color/background_dark"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="34dp"
+            tools:layout_editor_absoluteY="367dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/buttonCalculate"
+                android:layout_width="169dp"
+                android:layout_height="48dp"
+                android:background="@color/cardview_light_background"
+                android:text="CALCULATE"
+                tools:layout_editor_absoluteX="36dp"
+                tools:layout_editor_absoluteY="434dp"
+                tools:ignore="MissingConstraints" />
+
+            <Button
+                android:id="@+id/buttonGetPrice"
+                android:layout_width="145dp"
+                android:layout_height="50dp"
+                android:background="@color/cardview_light_background"
+                android:text="SHOW PRICE"
+                android:layout_marginLeft="50dp"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="250dp"
+                tools:layout_editor_absoluteY="434dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="50dp"
+            android:layout_height="wrap_content">
+
+
+            <Button
+                android:id="@+id/buttonPrintFile"
+                android:layout_width="167dp"
+                android:layout_height="49dp"
+                android:text="PRINT PAPER"
+                android:background="@color/cardview_light_background"
+                tools:layout_editor_absoluteX="34dp"
+                tools:layout_editor_absoluteY="517dp"
+                tools:ignore="MissingConstraints" />
+
+            <Button
+                android:id="@+id/buttonSaveFile"
+                android:layout_width="138dp"
+                android:layout_height="49dp"
+                android:text="SAVE TO FILE"
+                android:background="@color/cardview_light_background"
+                tools:layout_editor_absoluteX="250dp"
+                tools:layout_editor_absoluteY="517dp"
+                android:layout_marginLeft="50dp"
+                tools:ignore="MissingConstraints" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
